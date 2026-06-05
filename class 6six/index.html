@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header with nav bar</title>
+
+    <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background:linear-gradient(to right, #0066ff, #1663a7)
+            }
+
+        .header-container {
+            margin: 10px auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #fff;
+
+        }
+        .header-container img {
+            height: 60px;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+        ul li a {
+            text-decoration: none;
+            color: #296bdc;
+            font-weight: 700;
+        }
+
+        button {
+            padding: 10px 16px;
+            background-color: #3897f0;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-weight: 700;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <header>
+
+        <div class="header-container"> 
+            <img src="./download.png" alt="logo">
+             <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+
+                </ul>
+             </nav>
+              <button>Sign In</button>
+            
+            </div>
+    </header>
+    
+</body>
+</html>

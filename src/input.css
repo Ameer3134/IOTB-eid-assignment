@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+
+@layer{
+    .calculator-btn {
+        padding: 5px;
+        border: 1px solid var(--color-gray-300);
+        border-radius: 10px;
+    }
+
+    .calculator-btn:hover {
+        background-color: var(--color-gray-300);
+        color: var(--color-gray-700);
+        border: 1px solid var(--color-gray-900);
+    }   
+
+
+
+
+
+}

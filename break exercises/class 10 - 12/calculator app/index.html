@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my calculator</title>
+    <link rel="stylesheet" href="/src/output.css">
+    
+</head>
+<body class="bg-gray-900 " >
+    <header>
+        <h1 class="text-2xl font-bold text-center mt-8 text-gray-300 ">My Calculator</h1>
+    </header>
+
+    <main>
+
+        <!-------- CALCULATOR CONTAINER---- -->
+
+        <div id="calculator" class = "flex flex-col items-center justify-center my-5 " >
+
+            <input type="text" id="display" readonly class="w-[70%] lg:w-[50%]  bg-gray-100 text-gray-700  p-2 rounded-sm border-2  font-bold text-lg text-right " >
+
+
+        <!-------- KEYS----------- -->
+        <div id="keys" class="grid grid-cols-4 gap-2 lg:w-[50%] lg:p-5  w-[70%]  mx-auto my-5 bg-gray-600 text-gray-100  p-2 rounded-lg border-2 border-gray-300 font-bold text-lg
+        
+        
+        " >
+            
+        <button onclick="toDisplay('0')" class="calculator-btn">0</button>
+        <button onclick="toDisplay('1')" class="calculator-btn">1</button>
+        <button onclick="toDisplay('2')" class="calculator-btn">2</button>
+        <button onclick="toDisplay('3')" class="calculator-btn">3</button>
+        <button onclick="toDisplay('4')" class="calculator-btn">4</button>
+        <button onclick="toDisplay('5')" class="calculator-btn">5</button>
+        <button onclick="toDisplay('+')" class="calculator-btn">+</button>
+        <button onclick="toDisplay('-')" class="calculator-btn">-</button>
+        <button onclick="toDisplay('6')" class="calculator-btn">6</button>
+        <button onclick="toDisplay('7')" class="calculator-btn">7</button>
+        <button onclick="toDisplay('*')" class="calculator-btn">*</button>
+        <button onclick="toDisplay('/')" class="calculator-btn">/</button>
+        <button onclick="toDisplay('8')" class="calculator-btn">8</button>
+        <button onclick="toDisplay('9')" class="calculator-btn">9</button>
+        <button onclick="toDisplay('00')" class="calculator-btn">00</button>
+
+        <button onclick="toDisplay('.')" class="calculator-btn">.</button>
+
+        <button onclick="calculate()" class="calculator-btn">=</button>
+        <button onclick="clearDisplay()" class="calculator-btn">AC</button>
+        <button onclick="deleteDisplay()" class="calculator-btn">Del</button>
+
+        
+        </div>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <p class="text-center text-sm text-gray-300 mt-8"> This calculator was built by AL-AMEER ©️2026 </p>
+    </footer>
+
+
+
+
+<script src="./index.js"></script>
+</body>
+</html>
