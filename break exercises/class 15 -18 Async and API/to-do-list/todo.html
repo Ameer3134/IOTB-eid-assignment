@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css">    
+
+
+    <style>
+
+        /* .container{
+            background:linear-gradient(to right, #1a88c0 , #0ba378);
+            width: 50%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+
+        } */
+    
+        
+
+
+        li{
+            font-size: 18px;
+            padding: 4px;
+            border-bottom: 1px solid #ccc;
+            background-color: #333;
+            border-radius: 5px;
+            margin: 7px 0;
+
+        }
+/* 
+        ul li::before{
+            content: '';
+            height: 20px;
+            width: 20px;
+            background-image:url(./IMG-20250904-WA0042.jpg) ;
+            position: absolute;
+            left: 2;
+            right: 5;
+            border-radius: 50%;
+
+        } */
+
+
+        
+    
+        
+
+    </style>
+</head>
+<body class="bg-gray-200 flex flex-col items-center justify-center my-10 text-gray-200 font-bold">
+        <header>
+            <h2 class="text-gray-700 text-3xl my-4">To-Do-list</h2>
+        </header>
+
+            <main>  
+                <!-- CONTAINER -->
+    <div id="container"  class="bg-gray-600 p-4 rounded-lg shadow-md" >
+
+        
+
+        <div class="row">
+              
+        <input type="text"  id ="input-box"   class="p-2 rounded-lg text-gray-100 border border-gray-300 mr-3" placeholder="Enter a task"> 
+        
+          <button id="btn" onclick=" addTask() " class = "bg-teal-400 hover:bg-gray-700 hover:text-gray-100 text-gray-500 font-bold py-1 px-3 rounded">Add Task</button>
+
+        </div>
+
+
+
+        <div id="tasks">
+
+            
+        <ul id="list-container">
+
+            <!-- <li>Task 1</li>
+            
+            <li>Task 1</li>
+            
+            <li>Task 1</li> -->
+
+        </ul>
+
+                
+        </div>
+        
+            <!-- DELETE TASK -->
+        <div class="delete-container">
+            
+        <button id="delete-task" class="bg-red-300 hover:bg-gray-700 hover:text-gray-100 text-gray-800 py-1 px-3 rounded mt-4" onclick="deleteTask()">
+            Delete
+        </button>
+
+        </div>
+
+
+        
+
+    </div>
+
+    </main>
+
+    <footer>
+        <p class="text-gray-500 mt-10 text-sm ">This to-do-list app was built by Al-Ameer. 2026</p>
+    </footer>
+
+
+
+
+
+    <script src="./todo.js"></script>
+</body>
+</html>

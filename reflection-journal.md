@@ -1,9 +1,13 @@
 
-# CLASS 01
+# CLASS 01 
 
 ## Theory
 
-### Questionn 1
+### Question 1
+**Why it matters to know how browser turns HTML to what we see;**
+An ordinary internet user might not have cared to think about how a website works, but as a developer whose primary aim is to built a website that is user friendly and more inter active needs to understand this dynamic process.
+The pipeline explains why certain code is slow
+Knowing the pipeline means you can look at slow code and say exactly which stage it feels laggy.
 
 
 ### Question 2
@@ -133,7 +137,6 @@ rel="noopener" cuts the connection. The new tab has no access.
 
 # CLASS 04   
 
-https://meet.google.com/oma-gyme-gik
 
 
 ## Theory 
@@ -353,14 +356,6 @@ Extend config when Value is reused across the project.
 
 
 
-
-
-
-
-
-
-
-
 # CLASS 10
 
 
@@ -401,6 +396,233 @@ function getDiscount(price) {
 
 **previous operand** 
         let should be used also, because it get replaced after each operation.
+
+
+
+
+# CLASS 11
+
+## Theory 
+
+### Question 1
+**Difference between == and ===**
+== checks value only after type coercion. JavaScript tries to convert both sides to the same type before comparing. 
+
+=== checks value and type with no conversion.
+
+therefore: using == will cause a bug
+**example:** 
+
+function active(online) {
+  if (online == false) {     // it's not strictly equals to false here. 
+    return false;
+  }
+  return true;
+}
+
+
+### Question 2
+**Optional Chaining**
+? Safely accesses nested properties. If the left side is null or undefined, it short-circuits and returns undefined instead of throwing a TypeError.
+
+**example**
+onst user = { profile: null }
+console.log(user.profile.name)    // TypeError
+console.log(user.profile?.name)   // undefined 
+
+### Question 3
+
+**Nullish Coalescing ??  ||**
+Both provide a fallback value, but they differ in what triggers the fallback:
+
+|| :it looks for any falsy value: 0, "", false, null, undefine
+? :it looks for only null or undefined
+
+**Example where || fails and ?? is correct:**
+function createGame(config) {
+  const lives = config.lives || 3;   //  WRONG
+  const score = config.score ?? 0;   //  CORRECT
+}
+
+
+
+
+# CLASS 12 
+
+## Theory 
+
+### Question 1
+
+**Function Declaration**
+A function declaration is a statement that the parser recognizes and registers before execution begins.
+**Example**
+function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+**Function Expression**
+
+A function expression is a value that only exists once the runtime evaluates that line.
+**Example**
+
+const greet = function(name) {
+  return `Hello, ${name}!`;
+};
+
+
+### Question 2
+**pure functions**
+A pure function uses two strict rules:
+
+Same input & same output, always (deterministic)
+No side effects — it doesn't modify anything outside itself
+
+**Impure function example:**
+let runningTotal = 0;
+
+function addToTotal(n) {
+  runningTotal += n;      
+  return runningTotal;
+}
+
+
+### Question 3 
+
+**Callbacks & Higher-Order Functions**
+A callback is simply a function you pass to another function as an argument, to be called later.
+
+ higher-order function is any function that either accepts a function as an argument or returns a function.
+**example:**
+ // forEach is a higher-order function; the arrow is the callback
+[1, 2, 3].forEach(num => console.log(num * 2));
+
+They are necessary  to JavaScript for three reasons:
+
+Async code: nearly all async APIs rely on callbacks
+Array methods: map, filter, reduce are all higher-order functions
+Flexibility: they let you write generic logic and inject specific behavior, avoiding repetition
+
+
+# CLASS 13
+
+
+## Theory
+
+### Question 1
+
+**When to choose array over object**
+
+**Array:**
+Use when order matters, items are the same "type," or you need to repeat a collection. 
+**example:**
+Lists: shopping cart items, messages, search results.
+
+**Object:**
+Use when you need to look up data by a specific key, and each entry has named properties that mean something.  
+**example:**
+records: a user profile, config settings, a product.
+
+
+
+
+# CLASS 14 
+
+## Theory 
+
+### Question 3
+**Security Concern**
+
+innerHTML :
+It parses whatever string you give it as HTML. If that string contains user-provided data, an attacker can inject a `<script>` tag or event handler that executes in your page. 
+
+createElement & textContent never parses HTML — it treats everything as plain text.
+
+innerHTML is goood only when the content is entirely yours 
+
+# CLASS 15
+
+## Personal Reflection
+
+1. My hardest part is Java script. Most especially the implementation of addEventListener, i prefer to use onclick = ....
+
+I also faced issues in understanding parameters and local storage.
+
+2. When i'm stucked i rely on documentation and Artificial Intelligence (Ai). But i prefer the documentation than any other thing.
+I also like using w3schools documentations also for java scripts
+A good example is the Tailwind CSS, the documentation helped me to install Tailwind Cli which i now understand perfectly. 
+
+3. i wouldn't rate myself but i will say i'm trying
+4. I used local storage to store tasks input by users, i don't know any other options i would have used for this.
+
+
+
+# CLASS 16
+
+## Theory
+
+### Question 2
+**Microtasks & Macrotasks**
+The core difference is priority and timing, 
+both are async, but the event loop treats them very differently.
+
+**Microtasks:**
+It runs immediately after the current task, before anything else.
+
+**Macrotasks:**
+Run after the completion of the next event loop, one per cycle.
+
+**Why Promise.resolve().then() runs before setTimeout()**
+
+setTimeout() dosen't mean run now, rather it is scheduled for the next loop. By then, every pending microtask has already been done.
+
+
+# CLASS 17
+
+## Theory
+
+### Question 1
+**async & wait**
+async/await is syntax built on top of Promises that lets you write asynchronous code.
+
+async/await reads top-to-bottom like normal code, no .then()
+
+
+### Question 2
+**When to use try/catch**
+Use it whenever something can fail maybe network requests, file reads, evaluating a calculations or calling an API:
+
+**What happens without try/catch?**
+if an awaited Promise rejects and you don't catch it:
+the error becomes an unhandled Promise rejection
+
+
+# Self Assement 
+
+## Before this break, I knew…
+1. HTML & Vanilla CSS
+2. Tailwind CSS
+3. Java script basis
+
+## During this break, I learned…
+1. .map()  in java script
+2. how to generate data with API
+3. how to use for & while loop
+
+## I'm still confused about…
+1. local storage
+2. promise & then
+
+## My growth areas…
+1. HTML & CSS
+2. Tailwind CSS
+3. Java script basics
+
+## One thing I'll do differently in the next project…
+1. Local storage .
+
+
+
+
 
 
 
