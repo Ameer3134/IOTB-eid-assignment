@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/src/output.css">
+
+
+</head>
+<body class="bg-gray-900 flex flex-col items-center justify-center my-10 text-gray-100 font-bold">
+    
+    <header class=" bg-gray-100 rounded-lg w-1/2 p-4 text-center mb-10">
+        <h2 class="text-gray-800 text-3xl my-4 px-7  ">Personal Dashboard</h2>
+        
+        <p class="text-gray-700 text-lg">Hello User!</p>
+
+    </header>
+
+    <!-- clock widjet -->
+     
+            
+        <div id="clock" class="border border-gray-300 rounded-lg w-1/2 p-4 items-center justify-center text-center text-4xl font-bold text-gray-100" >
+            00:00:00
+
+        </div>
+
+
+
+
+<!-- WEATHER APP -->
+ 
+
+
+    <form  class="weatherForm mt-10" id="weather">
+
+        <input type="text" name="city" placeholder="Enter city name" class="cityInput p-2 rounded-lg  border border-gray-300 m-5" >
+
+        <button type="submit " class="bg-gray-700 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Get Weather</button>
+
+    </form>
+
+    <div class="card  hidden flex-col gap-4 bg-gray-700 border border-gray-800 rounded-lg w-1/2 p-6 items-center justify-center"  > 
+         
+        <h2 class="cityDisplay text-2xl font-bold "> NORWAY</h2>
+
+
+        <p class="tempDisplay text-3xl"> 90°F</p>
+
+
+        <p class="humidityDisplay text-2xl">Humidity: 60%</p>
+
+
+        <p class="weatherEmoji text-7xl"> ☀️</p>
+
+
+        <p class="errorDisplay text-red-600 text-lg">City not found!</p>
+
+    </div>
+
+    <!-- TO DO TASK -->
+
+            
+    <div id="container"  class="bg-gray-600 p-4 rounded-lg shadow-md mt-10" >   
+
+        <div class="row">
+              
+        <input type="text"  id ="input-box"   class="p-2 rounded-lg text-gray-100 border border-gray-300 mr-3" placeholder="Enter a task"> 
+        
+          <button id="btn" onclick=" addTask() " class = "bg-teal-400 hover:bg-gray-700 hover:text-gray-100 text-gray-500 font-bold py-1 px-3 rounded">Add Task</button>
+
+        </div>
+
+
+        <div id="tasks">
+
+            
+        <ul id="list-container">
+
+        </ul>
+
+                
+        </div>
+        
+            <!-- DELETE TASK -->
+        <div class="delete-container">
+            
+        <button id="delete-task" class="bg-red-300 hover:bg-gray-700 hover:text-gray-100 text-gray-800 py-1 px-3 rounded mt-4" onclick="deleteTask()">
+            Delete
+        </button>
+
+        </div>
+
+    </div>
+
+ 
+
+    <script src="./index.js"></script>
+
+</body>
+</html>
+
